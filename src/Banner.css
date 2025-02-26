@@ -1,0 +1,17 @@
+.banner-container {
+    padding: 0.1em;
+    height: 100px;
+    background-color: white;
+    display: flex;
+}
+
+.navbar {
+    
+}
+
+.logo {
+    height: 6em;
+    will-change: filter;
+    transition: filter 300ms;
+    max-height: 100px;
+  }

@@ -1,0 +1,11 @@
+.title {
+    color: var(--mantine-color-white);
+    padding: 100px 50px;
+    width: 55%;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        width: 100%;
+        padding: 50px 20px;
+        font-size: var(--mantine-h2-font-size)
+    }
+}

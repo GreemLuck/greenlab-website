@@ -1,0 +1,41 @@
+.hero {
+    position: relative;
+    background-color: var(--mantine-color-grey-9);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: calc(var(--mantine-spacing-xl) * 3);
+    z-index: 1;
+    position: relative;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        padding: calc(var(--mantine-spacing-xl));
+    }
+
+    .title {
+        color: var(--mantine-color-white);
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 1.1;
+
+        @media (max-width: $mantine-breakpoint-sm) {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+    }
+
+    .description {
+        color: var(--mantine-color-white);
+        max-width: 600px;
+      
+        @media (max-width: $mantine-breakpoint-sm) {
+          max-width: 100%;
+          font-size: var(--mantine-font-size-sm);
+        }
+      }
+  }
