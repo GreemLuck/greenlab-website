@@ -4,7 +4,7 @@
 }
 
 .container {
-    padding: 50px;
+    padding: 50px 20px;
 
     @media (max-width: $mantine-breakpoint-md) {
         padding: 50px 20px;

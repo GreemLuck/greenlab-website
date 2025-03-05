@@ -1,5 +1,6 @@
 import './App.css'
 import '@mantine/core/styles.css'
+import '@mantine/carousel/styles.css';
 import '@fontsource/poppins/400.css'
 import '@fontsource/poppins/500.css'
 import { createTheme, MantineProvider, MantineColorsTuple, rem, Container } from '@mantine/core'
@@ -7,6 +8,7 @@ import Banner from './Banner'
 import TitleCard from './TitleCard'
 import About from './About'
 import Prestations from './Prestations'
+import Samples from './Samples'
 
 const customGreem: MantineColorsTuple = [
   '#ebfef6',
@@ -62,11 +64,19 @@ const theme = createTheme({
     sizes: {
       h1: {
         fontWeight: '500',
-        fontSize: rem(70),
+        fontSize: rem(100),
       },
       h2: {
         fontWeight: '500',
+        fontSize: rem(80)
+      },
+      h3: {
+        fontWeight: "500",
         fontSize: rem(50)
+      },
+      h4: {
+        fontWeight: "500",
+        fontSize: rem(20)
       }
     }
   },
@@ -90,6 +100,7 @@ function App() {
     <TitleCard />
     <About />
     <Prestations />
+    <Samples />
   </MantineProvider>
 }
 
