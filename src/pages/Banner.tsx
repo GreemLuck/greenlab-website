@@ -1,5 +1,5 @@
 import {Burger, Group, Stack} from "@mantine/core";
-import greenlabLogo from "./assets/greenlab_logo.png"
+import greenlabLogo from "../assets/greenlab_logo.png"
 import "./Banner.css"
 import classes from "./Header.module.css"
 import { FaFacebook, FaInstagram } from "react-icons/fa";

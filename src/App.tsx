@@ -1,14 +1,14 @@
-import './App.css'
+import './styles/App.css'
 import '@mantine/core/styles.css'
 import '@mantine/carousel/styles.css';
 import '@fontsource/poppins/400.css'
 import '@fontsource/poppins/500.css'
 import { createTheme, MantineProvider, MantineColorsTuple, rem, Container } from '@mantine/core'
-import Banner from './Banner'
-import TitleCard from './TitleCard'
-import About from './About'
-import Prestations from './Prestations'
-import Samples from './Samples'
+import Banner from './pages/Banner.tsx'
+import TitleCard from './pages/TitleCard.tsx'
+import About from './pages/About.tsx'
+import Prestations from './pages/Prestations.tsx'
+import Samples from './pages/Samples.tsx'
 
 const customGreem: MantineColorsTuple = [
   '#ebfef6',
