@@ -1,0 +1,10 @@
+.footer {
+    background-color: var(--mantine-color-black);
+    color: var(--mantine-color-white);
+    padding: 50px;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--mantine-color-white);
+}

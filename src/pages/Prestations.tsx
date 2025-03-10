@@ -103,7 +103,7 @@ function Prestations() {
 
     return (
         <div className={classes.prestations} id="prestations">
-        <Container className={classes.container} size="xxl">
+        <Container className={classes.container} size="xl">
             <Grid gutter={{base: 50, md: 200}}>
                     <Grid.Col span={{base: 12, md: 6}}>
                         <Animated animation="fade-right" duration={2000}>

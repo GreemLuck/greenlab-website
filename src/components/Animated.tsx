@@ -23,7 +23,7 @@ export function Animated({children, animation = 'fade-up', duration = 2000 }: An
                     setVisible(true);
                 }
             },
-            { threshold: 1.0 }
+            { threshold: 0.8 }
         );
 
         if (ref.current) observer.observe(ref.current);

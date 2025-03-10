@@ -3,14 +3,6 @@
     background-color: var(--mantine-color-customGreem-7)
 }
 
-.container {
-    padding: 50px 20px;
-
-    @media (max-width: $mantine-breakpoint-md) {
-        padding: 50px 20px;
-    }
-}
-
 .control:hover {
     background-color: var(--mantine-color-customGreem-4);
 }

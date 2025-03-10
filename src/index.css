@@ -65,3 +65,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.mantine-Container-root {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

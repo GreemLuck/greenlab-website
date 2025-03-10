@@ -1,5 +1,5 @@
 .header {
-    background-color: var(--mantine-color-body);
+    background-color: var(--mantine-color-white);
     border-bottom: 1px solid light-dark(var(--mantine-color-grey-3), var(--mantine-color-dark-4));
   }
   
@@ -44,7 +44,6 @@
   }
 
   .logo {
-    padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
   }
 
   .burgermenu {

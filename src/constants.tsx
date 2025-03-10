@@ -1,0 +1,5 @@
+export const FACEBOOK_URL = "https://www.facebook.com/greenlabcreation/"
+export const INSTAGRAM_URL = "https://www.instagram.com/greenlab_creation_sarl/"
+export const PHONE_NUMBER = "+41774480514"
+export const PHONE_NUMBER_PRETTY = "077 448 05 14"
+export const EMAIL = "info@greenlab-creation.ch"

@@ -17,11 +17,11 @@ function TitleCard() {
                 src={grassImage}
             >
                 <Container size="xl">
-                <Animated animation="fade-left">
                     <Title className={classes.title} textWrap="pretty">
-                    Des espaces verts... et des murs qui tiennent !                     
+                    <Animated animation="fade-left">
+                    Des espaces verts... et des murs qui tiennent !       
+                    </Animated>              
                     </Title>
-                </Animated>
                 </Container>
             </BackgroundImage>
         </Box>

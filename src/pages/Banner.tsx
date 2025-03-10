@@ -1,15 +1,15 @@
 import {Burger, Group, Stack} from "@mantine/core";
-import greenlabLogo from "../assets/greenlab_logo.png"
-import "./Banner.css"
+import greenlabLogo from '../assets/greenlab_logo.png'
 import classes from "./Header.module.css"
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
+import { FACEBOOK_URL, INSTAGRAM_URL } from "../constants";
 
 const links = [
     {link: '/', label: 'Accueil'},
+    {link: '#about', label: 'À propos'},
     {link: '#prestations', label: 'Prestations'},
-    {link: '/a-porpos', label: 'À propos'},
     {link: '/contact', label: 'Contact'},
 ]
 
@@ -62,10 +62,10 @@ function Banner() {
                         >
                     {items}
                     <Group>
-                    <a href="www.instagram.com" className={classes.socials}>
+                    <a href={INSTAGRAM_URL} className={classes.socials}>
                             <FaInstagram size={40}/>
                         </a>
-                        <a href="www.facebook.com" className={classes.socials}>
+                        <a href={FACEBOOK_URL} className={classes.socials}>
                             <FaFacebook size={40}/>
                         </a>
                     </Group>

@@ -3,12 +3,14 @@ import '@mantine/core/styles.css'
 import '@mantine/carousel/styles.css';
 import '@fontsource/poppins/400.css'
 import '@fontsource/poppins/500.css'
+import '@fontsource/poppins/700.css'
 import { createTheme, MantineProvider, MantineColorsTuple, rem, Container } from '@mantine/core'
 import Banner from './pages/Banner.tsx'
 import TitleCard from './pages/TitleCard.tsx'
 import About from './pages/About.tsx'
 import Prestations from './pages/Prestations.tsx'
 import Samples from './pages/Samples.tsx'
+import { Footer } from './pages/Footer.tsx';
 
 const customGreem: MantineColorsTuple = [
   '#ebfef6',
@@ -42,7 +44,7 @@ const CONTAINER_SIZES: Record<string, number> = {
   sm: 500,
   md: 600, 
   lg: 700,
-  xl: 1500,
+  xl: 1700,
   xxl: 2000,
 }
 
@@ -77,6 +79,10 @@ const theme = createTheme({
       h4: {
         fontWeight: "500",
         fontSize: rem(20)
+      },
+      h5: {
+        fontWeight: "700",
+        fontSize: rem(18)
       }
     }
   },
@@ -89,7 +95,7 @@ const theme = createTheme({
             ? rem(CONTAINER_SIZES[size])
             : rem(size),
         }
-      })
+      }),
     })
   }
 })
@@ -101,6 +107,7 @@ function App() {
     <About />
     <Prestations />
     <Samples />
+    <Footer />
   </MantineProvider>
 }
 
