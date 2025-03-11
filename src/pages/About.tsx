@@ -1,12 +1,12 @@
-import { Container, Grid, Skeleton, Text, Title, Transition } from "@mantine/core";
+import { Container, Grid, Skeleton, Text, Title} from "@mantine/core";
 import classes from "./About.module.css"
 import { useEffect, useState } from "react";
 import { Animated } from "../components/Animated";
 
 function About() {
 
-    const [visible, setVisible] = useState(false);
-    const [loading, setLoading] = useState(true);
+    const [_, setVisible] = useState(false);
+    const [loading,] = useState(true);
 
 
     useEffect(() => {

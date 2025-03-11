@@ -1,4 +1,4 @@
-import { Center, Container, Grid, List, Text, Title } from "@mantine/core";
+import { Center, Grid, Text, Title } from "@mantine/core";
 import greenlabLogo from '../assets/greenlab_logo_light.png';
 import classes from "./Footer.module.css";
 import { EMAIL, FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER, PHONE_NUMBER_PRETTY } from "../constants";

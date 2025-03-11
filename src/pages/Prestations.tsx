@@ -1,4 +1,4 @@
-import { Accordion, Box, Container, Grid, Image, List, Text, Title } from "@mantine/core";
+import { Accordion, Container, Grid, List, Text, Title } from "@mantine/core";
 import classes from "./Prestations.module.css"
 import { useState } from "react";
 import { Animated } from "../components/Animated";
@@ -86,9 +86,9 @@ function Prestations() {
 
     const [value, setValue] = useState<string | null>(null);
 
-    const selectedService = prestations.find((item) => item.value === value);
-    const selectedImage = selectedService?.image1 || ''; // User a default later
-    const selectedAlt = selectedService?.alt1 || ''; // Use default alt
+    // const selectedService = prestations.find((item) => item.value === value);
+    // const selectedImage = selectedService?.image1 || ''; // User a default later
+    // const selectedAlt = selectedService?.alt1 || ''; // Use default alt
 
     const items = prestations.map((item) => (
         <Accordion.Item key={item.titre} value={item.value}>

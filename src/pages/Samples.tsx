@@ -1,6 +1,6 @@
 import { Carousel } from "@mantine/carousel";
 import classes from "./Samples.module.css"
-import { Box, Container, Image, Title } from "@mantine/core";
+import { Container, Image, Title } from "@mantine/core";
 import { Animated } from "../components/Animated";
 
 

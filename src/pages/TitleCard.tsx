@@ -1,11 +1,11 @@
-import { BackgroundImage, Box, Container, Title, Transition } from "@mantine/core";
+import { BackgroundImage, Box, Container, Title } from "@mantine/core";
 import grassImage from "../assets/grass.jpg";
 import { useEffect, useState } from "react";
 import classes from "./TitleCard.module.css"
 import { Animated } from "../components/Animated";
 
 function TitleCard() {
-    const [visible, setVisible] = useState(false);
+    const [_, setVisible] = useState(false);
 
     useEffect(() => {
         setVisible(true);

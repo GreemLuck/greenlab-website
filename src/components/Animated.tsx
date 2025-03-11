@@ -1,5 +1,3 @@
-import { Transition } from "@mantine/core";
-import { useInViewport } from "@mantine/hooks";
 import "./Animated.modules.css";
 import { ReactNode, useEffect, useRef, useState } from "react";
 
@@ -34,7 +32,7 @@ export function Animated({children, animation = 'fade-up', duration = 2000, thre
 
     return (
         <div ref={ref}>
-            <div className={animation + (visible ? " show" : "")}>
+            <div className={animation + (visible ? " show" : "")} style={{transition: "all " + duration + "ms"}}>
                 {children}
             </div>
         </div>
