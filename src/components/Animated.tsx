@@ -10,9 +10,10 @@ interface AnimatedProps {
     children: ReactNode;
     animation?: AnimationType;
     duration?: number;
+    threshold?: number;
 }
 
-export function Animated({children, animation = 'fade-up', duration = 2000 }: AnimatedProps) {
+export function Animated({children, animation = 'fade-up', duration = 2000, threshold = 0.8 }: AnimatedProps) {
     const [visible, setVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
@@ -23,7 +24,7 @@ export function Animated({children, animation = 'fade-up', duration = 2000 }: An
                     setVisible(true);
                 }
             },
-            { threshold: 0.8 }
+            { threshold: threshold }
         );
 
         if (ref.current) observer.observe(ref.current);

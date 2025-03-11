@@ -1,19 +1,46 @@
 import { Carousel } from "@mantine/carousel";
 import classes from "./Samples.module.css"
-import { Box, Container, Title } from "@mantine/core";
+import { Box, Container, Image, Title } from "@mantine/core";
+import { Animated } from "../components/Animated";
+
+
 
 function Samples() {
+    const images = import.meta.glob("/src/assets/carousel_home/*");
+    const imagePaths = Object.keys(images);
+    console.log(imagePaths);
+
+    const slides = imagePaths.map((path, index) => (
+        <Carousel.Slide key={path}>
+            <Image src={path} 
+                    alt={"Image " + index} 
+                    fit="cover" 
+                    height={500}
+                    width="100%"
+            />
+        </Carousel.Slide>
+    ));
+
     return (
-        <Container className={classes.container}> 
-        <Title order={2} textWrap="pretty">
-            Quelques exemples
+        <Container size="xxl"> 
+        <Title order={2} visibleFrom="md">
+            <Animated animation="fade-left">
+           Nos créations
+            </Animated>
         </Title>
-        <Carousel className={classes.samples} slideSize="33.333333%" slideGap="md">
-            <Carousel.Slide><Box className={classes.box}></Box></Carousel.Slide>
-            <Carousel.Slide><Box className={classes.box}></Box></Carousel.Slide>
-            <Carousel.Slide><Box className={classes.box}></Box></Carousel.Slide>
-            <Carousel.Slide><Box className={classes.box}></Box></Carousel.Slide>
+        <Title order={3} hiddenFrom="md">
+            <Animated animation="fade-left">
+           Nos créations
+           </Animated>
+        </Title>
+        <Animated animation="fade-up">
+        <Carousel className={classes.samples} 
+                    slideSize={{base: "100%", md: "25%"}} 
+                    slideGap={{base: "sm", md: "md"}}
+                    loop>
+            {slides}
         </Carousel>
+        </Animated>
         </Container>
     )
 }
