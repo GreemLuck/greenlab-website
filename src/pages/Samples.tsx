@@ -6,7 +6,7 @@ import { Animated } from "../components/Animated";
 
 
 function Samples() {
-    const images = import.meta.glob("/carousel_home/*");
+    const images = import.meta.glob("/src/assets/carousel_home/*", { eager: true});
     const imagePaths = Object.keys(images);
     console.log(imagePaths);
 
