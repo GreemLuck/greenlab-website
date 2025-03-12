@@ -6,11 +6,16 @@ import { Animated } from "../components/Animated";
 
 
 function Samples() {
-    const images = import.meta.glob("/src/assets/carousel_home/*", { eager: true});
-    const imagePaths = Object.keys(images);
-    console.log(imagePaths);
+    const images = [
+        "/carousel_home/20220930_162853.jpg",
+        "/carousel_home/20220930_162926.jpg",
+        "/carousel_home/20221010_111044.jpg",
+        "/carousel_home/LÉO_JARDIN_GUMFENS_20220610_12.jpg",
+        "/carousel_home/LÉO_JARDIN_GUMFENS_20220610_18.jpg",
+        "/carousel_home/Pavés granit sans joint.png",
+    ]
 
-    const slides = imagePaths.map((path, index) => (
+    const slides = images.map((path, index) => (
         <Carousel.Slide key={path}>
             <Image src={path} 
                     alt={"Image " + index} 
