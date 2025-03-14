@@ -1,8 +1,11 @@
-import { Button, Container, Grid, Textarea, TextInput, Title } from "@mantine/core";
+import { Button, Container, Grid, Modal, Textarea, TextInput, Title } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { Animated } from "../components/Animated";
+import { useDisclosure } from "@mantine/hooks";
 
 export default function ContactForm() {
+    const [opened, {open, close}] = useDisclosure(false);
+
     const form = useForm({
         mode: 'uncontrolled',
         initialValues: {
@@ -19,7 +22,17 @@ export default function ContactForm() {
         }
     })
 
+    const handleSubmit = (values: typeof form.values) => {
+        form.validate()
+        open();
+        form.reset();
+    }
+
     return (
+        <>
+        <Modal opened={opened} onClose={close} withCloseButton={false}>
+            Votre message a été envoyé avec succès. Nous allons revenir vers vous dans les plus brefs délais.
+        </Modal>
         <Container size="xxl" id="contact-form">
             <Grid>
 
@@ -38,7 +51,7 @@ export default function ContactForm() {
 
                 <Grid.Col span={{base: 12, md: 6}}>
                     <Animated animation="fade-left">
-                    <form name="contact" method="POST">
+                    <form name="contact" onSubmit={form.onSubmit(handleSubmit)}>
                         <Grid>
                             <Grid.Col span={6}>
                             <TextInput
@@ -82,5 +95,6 @@ export default function ContactForm() {
             </Grid>
             
         </Container>
+        </>
     )
 }
