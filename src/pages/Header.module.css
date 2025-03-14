@@ -21,7 +21,7 @@
     color: light-dark(var(--mantine-color-grey-7), var(--mantine-color-dark-0));
     font-size: var(--mantine-font-size-xl);
 
-    @media (max-width: $mantine-breakpoint-sm) {
+    @media (max-width: $mantine-breakpoint-md) {
       color: var(--mantine-color-white);
       font-size: 35px;
     }
@@ -31,7 +31,7 @@
       background-color: light-dark(var(--mantine-color-customGreem-5), var(--mantine-color-dark-6));
       color: var(--mantine-color-dark-customGreem-8);
 
-      @media (max-width: $mantine-breakpoint-sm) {
+      @media (max-width: $mantine-breakpoint-md) {
         background-color: light-dark(var(--mantine-color-grey-6), var(--mantine-color-grey-6));
       }
   }

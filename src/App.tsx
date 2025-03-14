@@ -11,6 +11,7 @@ import About from './pages/About.tsx'
 import Prestations from './pages/Prestations.tsx'
 import Samples from './pages/Samples.tsx'
 import { Footer } from './pages/Footer.tsx';
+import ContactForm from './pages/ContactForm.tsx';
 
 const customGreem: MantineColorsTuple = [
   '#ebfef6',
@@ -107,6 +108,7 @@ function App() {
     <About />
     <Prestations />
     <Samples />
+    <ContactForm />
     <Footer />
   </MantineProvider>
 }

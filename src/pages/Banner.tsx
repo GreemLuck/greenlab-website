@@ -38,7 +38,7 @@ function Banner() {
                     <img className={classes.logo} width="170" src={greenlabLogo}/>
                 </a>
                 <Group>          
-                    <Group gap={10} ml={50} className={classes.links} visibleFrom="sm">
+                    <Group gap={10} ml={50} className={classes.links} visibleFrom="md">
                         {items}
                         <a href="www.instagram.com" className={classes.socials}>
                             <FaInstagram size={25}/>
@@ -47,7 +47,7 @@ function Banner() {
                             <FaFacebook size={25}/>
                         </a>
                     </Group>
-                    <Burger opened={opened} onClick={toggle} size="lg" hiddenFrom="sm" />
+                    <Burger opened={opened} onClick={toggle} size="lg" hiddenFrom="md" />
                 </Group>
             </div>
             <div>
@@ -58,7 +58,7 @@ function Banner() {
                         justify="space-between"
                         gap={55}
                         p={50}
-                        c="var(--mantine-color-white"
+                        c="var(--mantine-color-white)"
                         >
                     {items}
                     <Group>

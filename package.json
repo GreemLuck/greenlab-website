@@ -13,6 +13,7 @@
     "@fontsource/poppins": "^5.1.1",
     "@mantine/carousel": "^7.17.0",
     "@mantine/core": "^7.17.0",
+    "@mantine/form": "^7.17.2",
     "@mantine/hooks": "^7.17.0",
     "embla-carousel-react": "^8.5.2",
     "react": "^19.0.0",
