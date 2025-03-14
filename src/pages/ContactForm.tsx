@@ -38,10 +38,11 @@ export default function ContactForm() {
 
                 <Grid.Col span={{base: 12, md: 6}}>
                     <Animated animation="fade-left">
-                    <form name="contact" data-netlify="true">
+                    <form name="contact" method="POST">
                         <Grid>
                             <Grid.Col span={6}>
                             <TextInput
+                                name="lastname"
                                 label="Nom"
                                 placeholder="Votre nom"
                                 key={form.key('lastname')}
@@ -50,6 +51,7 @@ export default function ContactForm() {
                             </Grid.Col>
                             <Grid.Col span={6}>
                             <TextInput
+                                name="firstname"
                                 label="Prénom"
                                 placeholder="Votre prénom"
                                 key={form.key('firstname')}
@@ -58,12 +60,14 @@ export default function ContactForm() {
                             </Grid.Col>
                         </Grid>
                         <TextInput
+                            name="email"
                             label="Email"
                             placeholder="Votre adresse mail"
                             key={form.key('email')}
                             mt={10}
                             {...form.getInputProps('email')}/>
                         <Textarea
+                            name="message"
                             label="Message"
                             placeholder="Laissez nous un message"
                             rows={6}
