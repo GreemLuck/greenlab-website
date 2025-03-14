@@ -22,7 +22,7 @@ export default function ContactForm() {
         }
     })
 
-    const handleSubmit = (values: typeof form.values) => {
+    const handleSubmit = (_: typeof form.values) => {
         form.validate()
         open();
         form.reset();
