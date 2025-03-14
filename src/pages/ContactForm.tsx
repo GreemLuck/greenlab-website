@@ -51,7 +51,7 @@ export default function ContactForm() {
 
                 <Grid.Col span={{base: 12, md: 6}}>
                     <Animated animation="fade-left">
-                    <form name="contact" onSubmit={form.onSubmit(handleSubmit)}>
+                    <form name="contact" onSubmit={form.onSubmit(handleSubmit)} method="POST">
                         <Grid>
                             <Grid.Col span={6}>
                             <TextInput
