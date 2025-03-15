@@ -8,6 +8,7 @@ export default function ContactForm() {
 
     const form = useForm({
         mode: 'uncontrolled',
+        name: 'contact',
         initialValues: {
             lastname: '',
             firstname: '',
@@ -52,6 +53,7 @@ export default function ContactForm() {
                 <Grid.Col span={{base: 12, md: 6}}>
                     <Animated animation="fade-left">
                     <form name="contact" onSubmit={form.onSubmit(handleSubmit)} method="POST">
+                        <input type="hidden" name="form-name" value="contact" />
                         <Grid>
                             <Grid.Col span={6}>
                             <TextInput
