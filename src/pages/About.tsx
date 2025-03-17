@@ -1,12 +1,12 @@
-import { Container, Grid, Skeleton, Text, Title} from "@mantine/core";
+import { Container, Grid, Image, Text, Title} from "@mantine/core";
 import classes from "./About.module.css"
 import { useEffect, useState } from "react";
 import { Animated } from "../components/Animated";
+import murImg from "../assets/mur_construction.jpg"
 
 function About() {
 
     const [_, setVisible] = useState(false);
-    const [loading,] = useState(true);
 
 
     useEffect(() => {
@@ -46,9 +46,9 @@ function About() {
                     </Animated>
                 </Grid.Col>
                 <Grid.Col span={{base: 12, md: 6}}>
-                    <Skeleton visible={loading} h="100%">
-                        La photo de groupe ici
-                    </Skeleton>
+                    <Animated animation="fade-left">
+                        <Image className={classes.image} src={murImg} alt="Image d'un ouvrier construicant un mur" radius="md" fit="cover"/>
+                    </Animated>
                 </Grid.Col>
             </Grid>
         </Container>

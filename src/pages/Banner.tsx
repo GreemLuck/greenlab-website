@@ -10,7 +10,7 @@ const links = [
     {link: '/', label: 'Accueil'},
     {link: '#about', label: 'À propos'},
     {link: '#prestations', label: 'Prestations'},
-    {link: '/contact', label: 'Contact'},
+    {link: '#contact', label: 'Contact'},
 ]
 
 function Banner() {
@@ -35,15 +35,15 @@ function Banner() {
         <header className={classes.header}>
             <div className={classes.inner}>
                 <a href="/">                
-                    <img className={classes.logo} width="170" src={greenlabLogo}/>
+                    <img className={classes.logo} width="170" src={greenlabLogo} alt="Logo Greenlab Creation"/>
                 </a>
                 <Group>          
                     <Group gap={10} ml={50} className={classes.links} visibleFrom="md">
                         {items}
-                        <a href="www.instagram.com" className={classes.socials}>
+                        <a href="https://www.instagram.com/greenlab_creation_sarl" className={classes.socials}>
                             <FaInstagram size={25}/>
                         </a>
-                        <a href="www.facebook.com" className={classes.socials}>
+                        <a href="https://www.facebook.com/greenlabcreation/" className={classes.socials}>
                             <FaFacebook size={25}/>
                         </a>
                     </Group>

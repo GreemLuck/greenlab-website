@@ -9,7 +9,7 @@
     font-weight: 900;
     line-height: 1.1;
 
-    @media (max-width: $mantine-breakpoint-sm) {
+    @media (max-width: $mantine-breakpoint-md) {
         font-size: 40px;
         line-height: 1.2;
     }
@@ -18,8 +18,16 @@
 .description {
   color: var(--mantine-color-white);
 
-  @media (max-width: $mantine-breakpoint-sm) {
+  @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
-    font-size: var(--mantine-font-size-sm);
+    font-size: var(--mantine-font-size-md);
+  }
+}
+
+.image {
+  height: 600px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    height: 400px;
   }
 }

@@ -42,6 +42,8 @@ function Samples() {
         <Carousel className={classes.samples} 
                     slideSize={{base: "100%", md: "25%"}} 
                     slideGap={{base: "sm", md: "md"}}
+                    nextControlProps={{"aria-label": "next-slide"}}
+                    previousControlProps={{"aria-label": "previous-slide"}}
                     loop>
             {slides}
         </Carousel>

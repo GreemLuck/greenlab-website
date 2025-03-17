@@ -10,7 +10,7 @@ export function Footer() {
                 <Grid>
                     <Grid.Col span={{base: 12, md: 3}}>
                     <a href="/">                
-                        <img width="170" src={greenlabLogo}/>
+                        <img width="170" src={greenlabLogo} alt="Logo Greenlab Creation"/>
                     </a>
                     </Grid.Col>
                     <Grid.Col span={{base: 12, md: 3}}>
