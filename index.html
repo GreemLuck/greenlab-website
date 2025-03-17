@@ -9,6 +9,7 @@
   <body>
     <div id="root"></div>
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="subject" value="Nouveau contact de ${lastname} ${firstname}" />
       <input type="text" name="lastname" />
       <input type="text" name="firstname"/>
       <input type="text" name="email"/>

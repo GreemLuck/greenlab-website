@@ -11,7 +11,7 @@ interface AnimatedProps {
     threshold?: number;
 }
 
-export function Animated({children, animation = 'fade-up', duration = 2000, threshold = 0.8 }: AnimatedProps) {
+export function Animated({children, animation = 'fade-up', duration = 1500, threshold = 0.8 }: AnimatedProps) {
     const [visible, setVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
