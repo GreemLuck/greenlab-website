@@ -44,6 +44,7 @@ export default function ContactForm() {
                     <Animated animation="fade-left">
                     <form name="contact" method="POST">
                         <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="subject" value="Nouveau contact de %{lastname} %{firstname}" />
                         <Grid>
                             <Grid.Col span={6}>
                             <TextInput
