@@ -1,5 +1,5 @@
 import { Center, Grid, Text, Title } from "@mantine/core";
-import greenlabLogo from '../assets/greenlab_logo_light.png';
+import greenlabLogo from '/Greenlab_RVB_Gauche_Blanc.svg';
 import classes from "./Footer.module.css";
 import { EMAIL, FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER, PHONE_NUMBER_PRETTY } from "../constants";
 

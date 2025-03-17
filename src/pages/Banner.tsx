@@ -1,5 +1,5 @@
 import {Burger, Group, Stack} from "@mantine/core";
-import greenlabLogo from '../assets/greenlab_logo.png'
+import greenlabLogo from '/Greenlab_RVB_Gauche_Vert.svg'
 import classes from "./Header.module.css"
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { useDisclosure } from "@mantine/hooks";
@@ -10,7 +10,7 @@ const links = [
     {link: '/', label: 'Accueil'},
     {link: '#about', label: 'À propos'},
     {link: '#prestations', label: 'Prestations'},
-    {link: '#contact', label: 'Contact'},
+    {link: '#contact-form', label: 'Contact'},
 ]
 
 function Banner() {
@@ -35,7 +35,7 @@ function Banner() {
         <header className={classes.header}>
             <div className={classes.inner}>
                 <a href="/">                
-                    <img className={classes.logo} width="170" src={greenlabLogo} alt="Logo Greenlab Creation"/>
+                    <img className={classes.logo} width={100} src={greenlabLogo} alt="Logo Greenlab Creation"/>
                 </a>
                 <Group>          
                     <Group gap={10} ml={50} className={classes.links} visibleFrom="md">
