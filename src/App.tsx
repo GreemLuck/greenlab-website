@@ -4,14 +4,10 @@ import '@mantine/carousel/styles.css';
 import '@fontsource/poppins/400.css'
 import '@fontsource/poppins/500.css'
 import '@fontsource/poppins/700.css'
-import { createTheme, MantineProvider, MantineColorsTuple, rem, Container } from '@mantine/core'
-import Banner from './pages/Banner.tsx'
-import TitleCard from './pages/TitleCard.tsx'
-import About from './pages/About.tsx'
-import Prestations from './pages/Prestations.tsx'
-import Samples from './pages/Samples.tsx'
-import { Footer } from './pages/Footer.tsx';
-import ContactForm from './pages/ContactForm.tsx';
+import { createTheme, MantineColorsTuple, rem, Container, MantineProvider } from '@mantine/core'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Thanks from './pages/Thanks';
 
 const customGreem: MantineColorsTuple = [
   '#ebfef6',
@@ -102,15 +98,16 @@ const theme = createTheme({
 })
 
 function App() {
-  return <MantineProvider theme={theme}>
-    <Banner />
-    <TitleCard />
-    <About />
-    <Prestations />
-    <Samples />
-    <ContactForm />
-    <Footer />
-  </MantineProvider>
+  return (
+    <MantineProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path='/merci' element={<Thanks />} />
+        </Routes>
+      </BrowserRouter>
+    </MantineProvider>
+  )
 }
 
 export default App

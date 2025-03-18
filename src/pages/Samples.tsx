@@ -27,7 +27,7 @@ function Samples() {
     ));
 
     return (
-        <Container size="xxl"> 
+        <Container size="xl"> 
         <Title order={2} visibleFrom="md">
             <Animated animation="fade-left">
            Nos créations
