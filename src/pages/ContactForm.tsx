@@ -88,7 +88,7 @@ export default function ContactForm() {
                     <Animated animation="fade-left">
                         <Paper c="black" p={40} radius="lg">
                        
-                    <form name="contact" method="POST" onSubmit={form.onSubmit(handleSubmit)}>
+                    <form name="contact" method="POST" action="/merci" onSubmit={form.onSubmit(handleSubmit)}>
                         <input type="hidden" name="form-name" value="contact" />
                         <input type="hidden" name="subject" key={form.key('subject')} {...form.getInputProps('subject')}/>
                         <Grid>
