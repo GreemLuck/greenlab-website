@@ -22,6 +22,7 @@ function Samples() {
                     fit="cover" 
                     height={500}
                     width="100%"
+                    loading="lazy"
             />
         </Carousel.Slide>
     ));
@@ -38,16 +39,15 @@ function Samples() {
            Nos créations
            </Animated>
         </Title>
-        <Animated animation="fade-up">
         <Carousel className={classes.samples} 
                     slideSize={{base: "100%", md: "25%"}} 
                     slideGap={{base: "sm", md: "md"}}
                     nextControlProps={{"aria-label": "next-slide"}}
                     previousControlProps={{"aria-label": "previous-slide"}}
+                    inViewThreshold={0.5}
                     loop>
             {slides}
         </Carousel>
-        </Animated>
         </Container>
     )
 }

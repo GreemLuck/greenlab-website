@@ -8,11 +8,11 @@ export default defineConfig({
     ViteImageOptimizer({
       jpg: {
         // https://sharp.pixelplumbing.com/api-output#jpeg
-        quality: 80,
+        quality: 60,
       },
       jpeg: {
         // https://sharp.pixelplumbing.com/api-output#jpeg
-        quality: 80,
+        quality: 60,
       },
       webp: {
         // https://sharp.pixelplumbing.com/api-output#webp
@@ -20,7 +20,7 @@ export default defineConfig({
       },
       png: {
         // https://sharp.pixelplumbing.com/api-output#png
-        quality: 80,
+        quality: 60,
       },
     }),
   ],

@@ -1,11 +1,19 @@
 .title {
     color: var(--mantine-color-white);
     padding: 100px 50px;
-    width: 55%;
+    width: 100%;
 
     @media (max-width: $mantine-breakpoint-md) {
         width: 100%;
         padding: 50px 20px;
         font-size: var(--mantine-h3-font-size)
     }
+}
+
+.backgroundGrass {
+    background-size: 180%
+}
+
+.backgroundBrick {
+    background-size: 210%
 }
