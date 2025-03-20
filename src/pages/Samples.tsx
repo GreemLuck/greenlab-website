@@ -13,6 +13,7 @@ function Samples() {
         "/carousel_home/LÉO_JARDIN_GUMFENS_20220610_12.jpg",
         "/carousel_home/LÉO_JARDIN_GUMFENS_20220610_18.jpg",
         "/carousel_home/Pavés granit sans joint.png",
+        "/carousel_home/oeuf.jpg"
     ]
 
     const slides = images.map((path, index) => (
