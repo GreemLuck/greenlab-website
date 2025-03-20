@@ -5,6 +5,7 @@ import Prestations from './Prestations.tsx'
 import Samples from './Samples.tsx'
 import { Footer } from './Footer.tsx';
 import ContactForm from './ContactForm.tsx';
+import { CookiesBanner } from '../components/CookiesBanner.tsx'
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Samples />
         <ContactForm />
         <Footer />
+        <CookiesBanner />
     </div>
     )
 }
