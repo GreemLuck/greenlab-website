@@ -1,7 +1,7 @@
 .title {
     color: var(--mantine-color-white);
     padding: 100px 50px;
-    width: 100%;
+    width: 50%;
 
     @media (max-width: $mantine-breakpoint-md) {
         width: 100%;
@@ -11,7 +11,13 @@
 }
 
 .backgroundGrass {
-    background-size: 180%
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 90%;
+}
+
+.darken {
+    background-color: rgba(0,0,0,0.4);
 }
 
 .backgroundBrick {

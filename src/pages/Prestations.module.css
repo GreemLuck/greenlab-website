@@ -1,10 +1,18 @@
 .prestations {
     position: relative;
-    background-color: var(--mantine-color-customGreem-7)
+    background-color: #D9D9CB;
+}
+
+.container{
+    color: #2F5341;
+}
+
+.control {
+    color: #2F5341;
 }
 
 .control:hover {
-    background-color: var(--mantine-color-customGreem-4);
+    background-color: #FFFFFF;
 }
 
 .control:focus {

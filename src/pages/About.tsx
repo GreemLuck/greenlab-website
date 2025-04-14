@@ -2,7 +2,7 @@ import { Container, Grid, Image, Text, Title} from "@mantine/core";
 import classes from "./About.module.css"
 import { useEffect, useState } from "react";
 import { Animated } from "../components/Animated";
-import murImg from "../assets/mur_construction.jpg"
+import murImg from "../assets/Greenlab_Team_01.jpg"
 
 function About() {
 

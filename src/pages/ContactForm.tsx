@@ -44,7 +44,7 @@ export default function ContactForm() {
             phone: (value) => (value ? (/^\+?\d{10,15}$/.test(value) ? null : "Veuillez entrer un numéro de téléphone valide") : 'Veuillez entrer votre numéro de téléphone'),
             message: (value) => value ? null : 'Veuillez entrer votre message',
         },
-        onSubmitPreventDefault: 'validation-failed',
+        onSubmitPreventDefault: 'always',
         transformValues: (values) => ({
             ...values,
             subject: "Contact Site - " + values.name,
@@ -55,14 +55,31 @@ export default function ContactForm() {
         form.setFieldValue('subject', value + " - Contact Site");
     })
 
-    const handleSubmit = (values: TransformedValues<typeof form>) => {
-        console.log(values);
+    const handleSubmit = async (values: TransformedValues<typeof form>) => {
+        // I have to submit the form and if accepted I need to redirect the user to the thank you page.
+        if(!form.isValid()) {
+            console.log("Not a valid form");
+        }
+
+        console.log("Valid Form");
+        
+        let formData = new FormData()
+        Object.entries(values).forEach(([keys,value]) => {
+            formData.append(keys, value);
+        })
+
+        formData.append("form-name", "contact");
+
+        await fetch("/", {
+            method: "POST",
+            body: formData,
+        })
     }
 
     return (
-        <Box pos="relative" bg={theme.colors.grey[9]} id="contact-form">
+        <Box pos="relative" bg={theme.colors.lightGreen[0]} id="contact-form">
 
-        <Container size="xl" c="white">
+        <Container size="xl" c={theme.colors.textGreen[0]}>
             <Grid>
                 <Grid.Col span={{base: 12, md: 6}}>
                 <Animated animation="fade-right">
@@ -88,7 +105,7 @@ export default function ContactForm() {
                     <Animated animation="fade-left">
                         <Paper c="black" p={40} radius="lg">
                        
-                    <form name="contact" method="POST" action="/merci" onSubmit={form.onSubmit(handleSubmit)}>
+                    <form name="contact" method="POST" onSubmit={form.onSubmit(handleSubmit)}>
                         <input type="hidden" name="form-name" value="contact" />
                         <input type="hidden" name="subject" key={form.key('subject')} {...form.getInputProps('subject')}/>
                         <Grid>
@@ -130,7 +147,7 @@ export default function ContactForm() {
                             key={form.key('message')}
                             {...form.getInputProps('message')}
                         />
-                        <Button type="submit" mt={20}>Envoyer</Button>
+                        <Button type="submit" mt={20} variant="filled" color={theme.colors.textGreen[0]}>Envoyer</Button>
                     </form>
                     </Paper>
                     </Animated>

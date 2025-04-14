@@ -18,28 +18,29 @@
     padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
     border-radius: var(--mantine-radius-sm);
     text-decoration: none;
-    color: light-dark(var(--mantine-color-grey-7), var(--mantine-color-dark-0));
+    color: #2F5341;
     font-size: var(--mantine-font-size-xl);
+    font-weight: 300;
 
     @media (max-width: $mantine-breakpoint-md) {
-      color: var(--mantine-color-white);
+      color: #2F5341;
       font-size: 35px;
     }
   }
 
   .link:hover {
-      background-color: light-dark(var(--mantine-color-customGreem-5), var(--mantine-color-dark-6));
-      color: var(--mantine-color-dark-customGreem-8);
+      background-color: #D9D9CB;
+      color: #2F5341;
 
       @media (max-width: $mantine-breakpoint-md) {
-        background-color: light-dark(var(--mantine-color-grey-6), var(--mantine-color-grey-6));
+        background-color:rgb(182, 182, 169);
       }
   }
 
   .socials, .socials:hover {
     display: block;
     padding: 8px 12px;
-    color: light-dark(var(--mantine-color-grey-10), var(--mantine-color-dark-0));
+    color: #2F5341;
     font-size: var(--mantine-font-size-xl);
   }
 

@@ -1,9 +1,9 @@
-import { Group, Text, Button, Dialog } from "@mantine/core";
+import { Group, Text, Button, Dialog, useMantineTheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
 export function CookiesBanner() {
     const [opened, { close }] = useDisclosure(true);
-
+    const theme = useMantineTheme();
     return (
         <Dialog opened={opened} withCloseButton onClose={close} position={{bottom: 20, left: 20}} size="lg" radius="md">
             <Group justify="space-between" mb="xs">
@@ -18,7 +18,7 @@ export function CookiesBanner() {
                 <Button onClick={close} variant="default" size="xs">
                 Refuser
                 </Button>
-                <Button onClick={close} variant="outline" size="xs">
+                <Button onClick={close} variant="outline" color={theme.colors.textGreen[0]} size="xs">
                 Accepter
                 </Button>
             </Group>

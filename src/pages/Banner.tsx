@@ -53,7 +53,7 @@ function Banner() {
             <div>
                 {opened && (
                     <Stack
-                        bg="var(--mantine-color-grey-8)"
+                        bg="#D9D9CB"
                         align="center"
                         justify="space-between"
                         gap={55}

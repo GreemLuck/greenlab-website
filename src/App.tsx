@@ -1,10 +1,11 @@
 import './styles/App.css'
 import '@mantine/core/styles.css'
 import '@mantine/carousel/styles.css';
+import '@fontsource/poppins/300.css'
 import '@fontsource/poppins/400.css'
 import '@fontsource/poppins/500.css'
 import '@fontsource/poppins/700.css'
-import { createTheme, MantineColorsTuple, rem, Container, MantineProvider } from '@mantine/core'
+import { createTheme, MantineColorsTuple, rem, Container, MantineProvider, colorsTuple, Button } from '@mantine/core'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Thanks from './pages/Thanks';
@@ -57,6 +58,9 @@ const theme = createTheme({
   colors: {
     customGreem,
     grey,
+    lightGreen: colorsTuple('#D9D9CB'),
+    darkGreen: colorsTuple('#4F5E4F'),
+    textGreen: colorsTuple('#2F5341'),
   },
   fontFamily: 'Poppins, sans-serif',
   headings: {
@@ -93,6 +97,34 @@ const theme = createTheme({
             : rem(size),
         }
       }),
+    }),
+    Button: Button.extend({
+      styles: (theme, params) => {
+        if (params.variant == "outline") {
+          return {
+            root: {
+              borderColor: theme.colors.textGreen[0],
+              '&:hover': {
+                backgroundColor: theme.colors.textGreen[0],
+              },
+            },
+          };
+        }
+
+        if (params.variant == "filled") {
+          return {
+            root: {
+              backgroundColor: theme.colors.textGreen[0],
+              color: 'white',
+              '&:hover': {
+                backgroundColor: theme.colors.darkGreen[0]
+              }
+            }
+          };
+        }
+
+        return {};
+      }
     })
   }
 })
