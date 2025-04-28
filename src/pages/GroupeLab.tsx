@@ -41,10 +41,9 @@ function GroupeLab() {
                             Thibaud Guillet et Marco Serrao, avant de s’élargir avec 
                             GREENLAB en 2019.
                             <br/><br/>
-                            En 2023, Thibaud et Marco ont également fondé <a href="https://www.dblab.ch/"><b>dBLAB</b></a>, 
+                            En 2023, Thibaud a également fondé <a href="https://www.dblab.ch/"><b>dBLAB</b></a>, 
                             une entreprise spécialisée dans l’acoustique, la sonorisation 
-                            et l’aménagement intérieur, nourrie par leur passion commune 
-                            pour la musique et le design sonore.
+                            et l’aménagement intérieur, nourrie par sa passion pour la musique et le design sonore.
                             <br/><br/>
                             Chaque entité du Groupe LAB a son identité propre, mais toutes 
                             partagent une même philosophie : valoriser le savoir-faire 
