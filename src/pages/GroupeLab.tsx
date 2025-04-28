@@ -20,7 +20,7 @@ function GroupeLab() {
     return (
         <div id="groupelab">
             <Container className={classes.container} size="xl">
-                <SimpleGrid cols={2}>
+                <SimpleGrid cols={{base: 1, md: 2}}>
                     <Animated animation="fade-right">
                     <div className={classes.logos}>
                         {items}
@@ -28,7 +28,7 @@ function GroupeLab() {
                     </Animated>
                     <div className="col-left">
                         <Animated animation="fade-left">
-                            <Title className="">
+                            <Title className={classes.title}>
                                 Une synergie familiale : le Groupe LAB
                             </Title>
                         </Animated>

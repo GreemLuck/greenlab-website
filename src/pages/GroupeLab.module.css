@@ -6,12 +6,22 @@
     color: var(--mantine-color-textGreen-0);
 }
 
+.title {
+    @media (max-width: $mantine-breakpoint-md) {
+        font-size: 40px;
+    }
+}
+
 .logos {
     position: relative;
     margin: auto;
     width: 500px;
     height: 500px;
     border-radius: 50%;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        height: 300px;
+    }
 }
 
 .logos img {
@@ -24,9 +34,19 @@
     animation: logo-rotation 30s forwards infinite;
     animation-timing-function: linear;
     animation-delay: calc((30/var(--n)) * var(--i) * -1s);
+
+    @media (max-width: $mantine-breakpoint-md) {
+        width: 100px;
+        animation-name: logo-rotation-mobile;
+    }
 }
 
 @keyframes logo-rotation {
     from {transform: rotate(0deg) translateX(200px) rotate(0deg);}
     to {transform: rotate(360deg) translateX(200px) rotate(-360deg);}
   }
+
+@keyframes logo-rotation-mobile {
+    from {transform: rotate(0deg) translateX(100px) rotate(0deg);}
+    to {transform: rotate(360deg) translateX(100px) rotate(-360deg);}
+}
