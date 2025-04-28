@@ -24,6 +24,7 @@ export function Footer() {
                         <Text>Gremaud Léo et Perroud Eliot</Text>
                         <Text><a href={"mailto:" + EMAIL}>{EMAIL}</a></Text>
                         <Text><a href={"tel:" + PHONE_NUMBER}>{PHONE_NUMBER_PRETTY}</a></Text>
+                        <Text><a href={"tel: +41799071021"}>079 907 10 21</a></Text>
                     </Grid.Col>
                     <Grid.Col span={{base: 12, md: 3}}>
                         <Title order={5}>Nous suivre</Title>

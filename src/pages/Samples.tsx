@@ -12,8 +12,15 @@ function Samples() {
         "/carousel_home/20221010_111044.jpg",
         "/carousel_home/LÉO_JARDIN_GUMFENS_20220610_12.jpg",
         "/carousel_home/LÉO_JARDIN_GUMFENS_20220610_18.jpg",
-        "/carousel_home/Pavés granit sans joint.png",
-        "/carousel_home/oeuf.jpg"
+        "/carousel_home/oeuf.jpg",
+        "/carousel_home/Greenlab_20250404_Web-02.jpg" ,
+        "/carousel_home/Greenlab_20250404_Web-13.jpg",
+        "/carousel_home/Greenlab_20250404_Web-15.jpg",
+        "/carousel_home/Greenlab_20250404_Web-21.jpg",
+        "/carousel_home/Greenlab_20250404_Web-23.jpg",
+        "/carousel_home/Greenlab_20250404_Web-28.jpg",
+        "/carousel_home/Greenlab_20250404_Web-30.jpg",
+        "/carousel_home/Greenlab_20250404_Web-32.jpg",
     ]
 
     const slides = images.map((path, index) => (
@@ -29,7 +36,7 @@ function Samples() {
     ));
 
     return (
-        <Container size="xl"> 
+        <Container size="xl" id="samples"> 
         <Title order={2} visibleFrom="md">
             <Animated animation="fade-left">
            Nos créations

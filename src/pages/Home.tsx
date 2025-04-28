@@ -6,6 +6,7 @@ import Samples from './Samples.tsx'
 import { Footer } from './Footer.tsx';
 import ContactForm from './ContactForm.tsx';
 import { CookiesBanner } from '../components/CookiesBanner.tsx'
+import GroupeLab from './GroupeLab.tsx'
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Banner />
         <TitleCard />
         <About />
+        <GroupeLab />
         <Prestations />
         <Samples />
         <ContactForm />

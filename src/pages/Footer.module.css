@@ -8,3 +8,7 @@ a {
     text-decoration: underline;
     color: var(--mantine-color-white);
 }
+
+a:hover {
+    color: var(--mantine-color-lightGreen-0);
+}

@@ -10,6 +10,7 @@ const links = [
     {link: '/', label: 'Accueil'},
     {link: '#about', label: 'À propos'},
     {link: '#prestations', label: 'Prestations'},
+    {link: '#samples', label: "Créations"},
     {link: '#contact-form', label: 'Contact'},
 ]
 
