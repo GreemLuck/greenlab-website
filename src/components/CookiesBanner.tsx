@@ -11,14 +11,14 @@ export function CookiesBanner() {
                     Ce site utilise des cookies        
                 </Text>
             </Group>
-            <Text c="dimmed" fz="xs">
+            <Text fz="xs">
                 Nous utilisons des cookies pour mesurer la performance de notre site avec Google Analytics. En continuant votre navigation, vous acceptez leur utilisation.
             </Text>
             <Group justify="flex-end" mt="md">
-                <Button onClick={close} variant="default" size="xs">
+                <Button onClick={close} variant="default" size="xs" aria-label="Refuser les cookies">
                 Refuser
                 </Button>
-                <Button onClick={close} variant="outline" color={theme.colors.textGreen[0]} size="xs">
+                <Button onClick={close} variant="outline" color={theme.colors.textGreen[0]} size="xs" aria-label="Accepter les cookies">
                 Accepter
                 </Button>
             </Group>

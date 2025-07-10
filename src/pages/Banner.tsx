@@ -41,14 +41,14 @@ function Banner() {
                 <Group>          
                     <Group gap={10} ml={50} className={classes.links} visibleFrom="md">
                         {items}
-                        <a href="https://www.instagram.com/greenlab_creation_sarl" className={classes.socials}>
+                        <a href="https://www.instagram.com/greenlab_creation_sarl" className={classes.socials} aria-label="Lien vers GreenLab Instagram">
                             <FaInstagram size={25}/>
                         </a>
-                        <a href="https://www.facebook.com/greenlabcreation/" className={classes.socials}>
+                        <a href="https://www.facebook.com/greenlabcreation/" className={classes.socials} aria-label="Lien vers GreenLab Facebook">
                             <FaFacebook size={25}/>
                         </a>
                     </Group>
-                    <Burger opened={opened} onClick={toggle} size="lg" hiddenFrom="md" />
+                    <Burger aria-label="Ouvrir la navigation" opened={opened} onClick={toggle} size="lg" hiddenFrom="md" />
                 </Group>
             </div>
             <div>
@@ -63,10 +63,10 @@ function Banner() {
                         >
                     {items}
                     <Group>
-                    <a href={INSTAGRAM_URL} className={classes.socials}>
+                    <a href={INSTAGRAM_URL} className={classes.socials} aria-label="Lien vers GreenLab Instagram">
                             <FaInstagram size={40}/>
                         </a>
-                        <a href={FACEBOOK_URL} className={classes.socials}>
+                        <a href={FACEBOOK_URL} className={classes.socials} aria-label="Lien vers GreenLab Facebook">
                             <FaFacebook size={40}/>
                         </a>
                     </Group>
