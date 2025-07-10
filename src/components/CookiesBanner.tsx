@@ -15,10 +15,10 @@ export function CookiesBanner() {
                 Nous utilisons des cookies pour mesurer la performance de notre site avec Google Analytics. En continuant votre navigation, vous acceptez leur utilisation.
             </Text>
             <Group justify="flex-end" mt="md">
-                <Button onClick={close} variant="default" size="xs" aria-label="Refuser les cookies">
+                <Button onClick={close} variant="default" size="xs" name="Refuser" aria-label="Refuser les cookies">
                 Refuser
                 </Button>
-                <Button onClick={close} variant="outline" color={theme.colors.textGreen[0]} size="xs" aria-label="Accepter les cookies">
+                <Button onClick={close} variant="outline" color={theme.colors.textGreen[0]} size="xs" name="Accepter" aria-label="Accepter les cookies">
                 Accepter
                 </Button>
             </Group>

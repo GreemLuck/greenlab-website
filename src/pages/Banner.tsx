@@ -48,7 +48,7 @@ function Banner() {
                             <FaFacebook size={25}/>
                         </a>
                     </Group>
-                    <Burger aria-label="Ouvrir la navigation" opened={opened} onClick={toggle} size="lg" hiddenFrom="md" />
+                    <Burger name="Ouvrir la Navigation" aria-label="Ouvrir la navigation" opened={opened} onClick={toggle} size="lg" hiddenFrom="md" />
                 </Group>
             </div>
             <div>
