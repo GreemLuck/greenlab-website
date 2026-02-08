@@ -3,6 +3,7 @@ import { TransformedValues, useForm } from "@mantine/form";
 import { Animated } from "../components/Animated";
 import { CiAt, CiMapPin, CiPhone } from "react-icons/ci";
 import { ADDRESS1, ADDRESS2, EMAIL, PHONE_NUMBER_PRETTY } from "../constants";
+import { useNavigate } from "react-router-dom";
 
 export default function ContactForm() {
     const theme = useMantineTheme();
@@ -32,7 +33,7 @@ export default function ContactForm() {
 
     const form = useForm({
         mode: 'uncontrolled',
-        name: 'contact',
+        name: formName,
         initialValues: {
             subject: '',
             name: '',
@@ -46,7 +47,6 @@ export default function ContactForm() {
             phone: (value) => (value ? (/^\+?\d{10,15}$/.test(value) ? null : "Veuillez entrer un numéro de téléphone valide") : 'Veuillez entrer votre numéro de téléphone'),
             message: (value) => value ? null : 'Veuillez entrer votre message',
         },
-        onSubmitPreventDefault: 'always',
         transformValues: (values) => ({
             ...values,
             subject: "Contact Site - " + values.name,
@@ -57,24 +57,22 @@ export default function ContactForm() {
         form.setFieldValue('subject', value + " - Contact Site");
     })
 
-    const handleSubmit = async (values: TransformedValues<typeof form>) => {
-        // I have to submit the form and if accepted I need to redirect the user to the thank you page.
-        if(!form.isValid()) {
-            console.log("Not a valid form");
-        }
+    const navigate = useNavigate();
 
-        console.log("Valid Form");
-        
-        const formData = new FormData()
+    const handleSubmit = async (values: TransformedValues<typeof form>) => {        
+        const searchParam =  new URLSearchParams();
         Object.entries(values).forEach(([keys,value]) => {
-            formData.append(keys, value);
+            searchParam.append(keys, value);
         })
 
-        formData.append("form-name", "contact");
+        searchParam.append("form-name", formName);
 
-        await fetch("/", {
+        fetch("", {
             method: "POST",
-            body: formData,
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: searchParam.toString(),
+        }).then(() => {
+            navigate("/merci");
         })
     }
 
@@ -108,7 +106,7 @@ export default function ContactForm() {
                         <Paper c="var(--mantine-color-text)" p={40} radius="lg">
                        
                     <form name={formName} method="POST" onSubmit={form.onSubmit(handleSubmit)}>
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="form-name" value={formName} />
                         <input type="hidden" name="subject" key={form.key('subject')} {...form.getInputProps('subject')}/>
                         <Grid>
                             <Grid.Col span={6}>

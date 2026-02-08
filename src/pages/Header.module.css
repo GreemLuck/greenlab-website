@@ -52,10 +52,6 @@
     background-color: var(--mantine-color-grey-8)
   }
 
-  .mantine-Burger-root {
-    color: 'black';
-  }
-
   html {
     scroll-behavior: smooth;
   }

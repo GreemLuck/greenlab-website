@@ -138,7 +138,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path='/merci' element={<Thanks />} />
+          <Route path='merci' element={<Thanks />} />
         </Routes>
       </BrowserRouter>
     </MantineProvider>
