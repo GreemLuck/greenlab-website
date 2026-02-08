@@ -18,7 +18,7 @@ export default function Thanks() {
                 <Anchor href="/" mt="sm" className={classes.anchor}>
                     <Center inline>
                         <BsArrowLeftCircleFill size={20} />
-                        <Box ml={10} fw={500}>Back to Mantine website</Box>
+                        <Box ml={10} fw={500}>Retour vers le site</Box>
                     </Center>
                 </Anchor>
             </Card>

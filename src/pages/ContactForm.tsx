@@ -7,6 +7,8 @@ import { ADDRESS1, ADDRESS2, EMAIL, PHONE_NUMBER_PRETTY } from "../constants";
 export default function ContactForm() {
     const theme = useMantineTheme();
 
+    const formName = import.meta.env.DEV ? "contact-dev" : "contact";
+
     const contactInfo = [
         {title: 'Email', description: EMAIL, icon: CiAt},
         {title: 'Téléphone', description: PHONE_NUMBER_PRETTY, icon: CiPhone},
@@ -63,7 +65,7 @@ export default function ContactForm() {
 
         console.log("Valid Form");
         
-        let formData = new FormData()
+        const formData = new FormData()
         Object.entries(values).forEach(([keys,value]) => {
             formData.append(keys, value);
         })
@@ -103,9 +105,9 @@ export default function ContactForm() {
 
                 <Grid.Col span={{base: 12, md: 6}}>
                     <Animated animation="fade-left">
-                        <Paper c="black" p={40} radius="lg">
+                        <Paper c="var(--mantine-color-text)" p={40} radius="lg">
                        
-                    <form name="contact" method="POST" onSubmit={form.onSubmit(handleSubmit)}>
+                    <form name={formName} method="POST" onSubmit={form.onSubmit(handleSubmit)}>
                         <input type="hidden" name="form-name" value="contact" />
                         <input type="hidden" name="subject" key={form.key('subject')} {...form.getInputProps('subject')}/>
                         <Grid>
@@ -147,7 +149,7 @@ export default function ContactForm() {
                             key={form.key('message')}
                             {...form.getInputProps('message')}
                         />
-                        <Button type="submit" mt={20} variant="filled" color={theme.colors.textGreen[0]}>Envoyer</Button>
+                        <Button name="Envoyer" type="submit" mt={20} variant="filled" color={theme.colors.textGreen[0]}>Envoyer</Button>
                     </form>
                     </Paper>
                     </Animated>

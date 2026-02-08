@@ -9,6 +9,10 @@
     
 }
 
+.header {
+    container: black;
+}
+
 .logo {
     height: 6em;
     will-change: filter;

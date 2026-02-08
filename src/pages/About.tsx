@@ -6,7 +6,7 @@ import murImg from "../assets/Greenlab_Team_01.jpg"
 
 function About() {
 
-    const [_, setVisible] = useState(false);
+    const [, setVisible] = useState(false);
 
 
     useEffect(() => {
